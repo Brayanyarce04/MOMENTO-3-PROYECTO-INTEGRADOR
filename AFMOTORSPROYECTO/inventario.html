@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inventario | AF MOTORS - Compra y Venta de Motocicletas</title>
+
+    <meta name="description" content="Conoce el inventario de motocicletas de AF MOTORS. Encuentra motos nuevas y usadas, consulta precios y cotiza por WhatsApp.">
+
+    <meta name="keywords" content="AF MOTORS, inventario motos, comprar motocicletas, motos nuevas, motos usadas, Bello, Medellín">
+
+    <meta name="author" content="AF MOTORS">
+
+    <link rel="icon" type="image/png" href="img/Logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+
+            <a href="index.html" class="logo">
+                <img src="img/Logo.png" alt="AF MOTORS">
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navbar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="inventario.html" class="active">INVENTARIO</a></li>
+                    <li><a href="servicios.html">SERVICIOS</a></li>
+                    <li><a href="vende-tu-moto.html">VENDE TU MOTO</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+
+            <a href="https://www.instagram.com/compraventaaf_motors/" target="_blank" rel="noopener noreferrer" class="header-social">
+                SÍGUENOS
+            </a>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="inventory-hero" id="inicio-inventario">
+            <div class="inventory-hero-overlay"></div>
+
+            <div class="inventory-hero-content">
+                <span class="inventory-eyebrow">AF MOTORS · CATÁLOGO EXCLUSIVO</span>
+
+                <h1>
+                    ENCUENTRA TU
+                    <span>PRÓXIMA MOTO</span>
+                </h1>
+
+                <p>
+                    Descubre nuestro inventario de motocicletas nuevas y usadas.
+                    Calidad, confianza y excelentes oportunidades.
+                </p>
+
+                <a href="#catalogo" class="inventory-main-button">
+                    EXPLORAR INVENTARIO
+                    <span>↓</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="inventory-intro">
+            <div class="container">
+                <span class="inventory-section-label">NUESTRO INVENTARIO</span>
+                <h2>ENCUENTRA LA MOTO <span>IDEAL PARA TI</span></h2>
+                <p>
+                    Explora nuestras motocicletas, compara sus características
+                    y solicita una cotización directamente con nuestros asesores.
+                </p>
+            </div>
+        </section>
+
+        <section class="inventory-catalog" id="catalogo">
+
+            <div class="container">
+
+                <div class="inventory-heading">
+                    <div>
+                        <span class="inventory-section-label">CATÁLOGO AF MOTORS</span>
+                        <h2>NUESTRAS <span>MOTOCICLETAS</span></h2>
+                    </div>
+
+                    <span class="inventory-total" id="inventory-total">
+                        14 MOTOCICLETAS
+                    </span>
+                </div>
+
+                <div class="inventory-filters">
+
+                    <div class="inventory-search">
+                        <label for="search-moto">Buscar motocicleta</label>
+                        <input type="search" id="search-moto" placeholder="Ej. Yamaha NMAX...">
+                    </div>
+
+                    <div class="inventory-filter">
+                        <label for="filter-brand">Marca</label>
+                        <select id="filter-brand">
+                            <option value="">Todas las marcas</option>
+                            <option value="Yamaha">Yamaha</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Suzuki">Suzuki</option>
+                            <option value="Ducati">Ducati</option>
+                        </select>
+                    </div>
+
+                    <div class="inventory-filter">
+                        <label for="filter-condition">Condición</label>
+                        <select id="filter-condition">
+                            <option value="">Todas</option>
+                            <option value="Nueva">Nuevas</option>
+                            <option value="Usada">Usadas</option>
+                            <option value="Por confirmar">Por confirmar</option>
+                        </select>
+                    </div>
+
+                    <div class="inventory-filter">
+                        <label for="filter-price">Ordenar precio</label>
+                        <select id="filter-price">
+                            <option value="">Predeterminado</option>
+                            <option value="asc">Menor a mayor</option>
+                            <option value="desc">Mayor a menor</option>
+                        </select>
+                    </div>
+
+                    <button type="button" id="clear-filters" class="inventory-clear">
+                        LIMPIAR FILTROS
+                    </button>
+
+                </div>
+
+                <div class="inventory-grid" id="inventory-grid"></div>
+
+                <div class="inventory-empty" id="inventory-empty" hidden>
+                    <h3>NO ENCONTRAMOS MOTOCICLETAS</h3>
+                    <p>Intenta cambiar los filtros de búsqueda.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="quotation-section" id="cotizador">
+
+            <div class="container">
+
+                <div class="quotation-heading">
+                    <span class="inventory-section-label">COTIZACIÓN PERSONALIZADA</span>
+                    <h2>CALCULA EL VALOR DE <span>TU PRÓXIMA MOTO</span></h2>
+                    <p>
+                        Selecciona una motocicleta y conoce el valor estimado
+                        de tu compra, incluyendo los conceptos correspondientes.
+                    </p>
+                </div>
+
+                <div class="quotation-container">
+
+                    <div class="quotation-form">
+
+                        <div class="quotation-field">
+                            <label for="quote-motorcycle">Selecciona tu motocicleta</label>
+                            <select id="quote-motorcycle">
+                                <option value="">Selecciona una motocicleta</option>
+                            </select>
+                        </div>
+
+                        <div class="quotation-bike-info" id="quotation-bike-info">
+                            <p>Selecciona una motocicleta para comenzar tu cotización.</p>
+                        </div>
+
+                        <div class="quotation-insurance">
+                            <div>
+                                <strong>SEGURO TODO RIESGO</strong>
+                                <p>Protección por un año · $1.500.000 COP</p>
+                            </div>
+
+                            <label class="quotation-switch">
+                                <input type="checkbox" id="include-insurance">
+                                <span class="quotation-slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="quotation-note">
+                            <span>!</span>
+                            <p>
+                                <strong>IMPORTANTE:</strong>
+                                Consulta con nuestro asesor por WhatsApp hasta cuándo
+                                están vigentes los papeles de la motocicleta y confirma
+                                los conceptos incluidos en la negociación.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="quotation-result">
+
+                        <span class="quotation-result-label">RESUMEN DE TU COTIZACIÓN</span>
+
+                        <h3>DESGLOSE DE VALORES</h3>
+
+                        <div id="quotation-breakdown">
+                            <p>Selecciona una motocicleta para visualizar los valores.</p>
+                        </div>
+
+                        <div class="quotation-total">
+                            <span>TOTAL ESTIMADO</span>
+                            <strong id="quotation-total">$0 COP</strong>
+                        </div>
+
+                        <p class="quotation-disclaimer">
+                            Los valores son estimados y deben confirmarse con un asesor de AF MOTORS.
+                        </p>
+
+                        <a href="#" id="quotation-whatsapp" class="quotation-whatsapp" target="_blank" rel="noopener noreferrer">
+                            COTIZAR POR WHATSAPP
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="inventory-cta">
+            <div class="container">
+                <span class="inventory-section-label">AF MOTORS</span>
+                <h2>¿NO ENCUENTRAS LA MOTO QUE BUSCAS?</h2>
+                <p>
+                    Comunícate con nosotros. Nuestro equipo te ayudará
+                    a encontrar la motocicleta ideal.
+                </p>
+
+                <a href="https://wa.me/573043909319?text=Hola%2C%20estoy%20buscando%20una%20motocicleta%20y%20quisiera%20recibir%20asesor%C3%ADa." target="_blank" rel="noopener noreferrer">
+                    HABLAR CON UN ASESOR
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+                <img src="img/Logo.png" alt="AF MOTORS">
+                <p>Velocidad, confianza y experiencia en cada negociación.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>ENLACES</h3>
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="inventario.html">Inventario</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="vende-tu-moto.html">Vende tu moto</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>CONTÁCTANOS</h3>
+                <p>WhatsApp: +57 304 390 9319</p>
+                <p>Bello, Antioquia</p>
+                <a href="https://www.instagram.com/compraventaaf_motors/" target="_blank" rel="noopener noreferrer">
+                    Instagram AF MOTORS
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 AF MOTORS. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/inventario.js"></script>
+
+</body>
+</html>

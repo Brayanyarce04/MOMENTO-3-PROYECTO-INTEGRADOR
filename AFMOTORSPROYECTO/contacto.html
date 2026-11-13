@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | AF MOTORS - Bello y Medellín</title>
+    <meta name="description" content="Contáctanos en AF MOTORS. Atención personalizada en Bello y Medellín para compra, venta y asesoría de motocicletas.">
+    <meta name="theme-color" content="#03080C">
+    <link rel="icon" type="image/png" href="img/Logo.png">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="img/Logo.png" alt="AF MOTORS">
+            </a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navbar">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="inventario.html">INVENTARIO</a></li>
+                    <li><a href="servicios.html">SERVICIOS</a></li>
+                    <li><a href="vende-tu-moto.html">VENDE TU MOTO</a></li>
+                    <li><a href="contacto.html" class="active">CONTACTO</a></li>
+                </ul>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-header">SÍGUENOS</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="container">
+                <div class="section-tag"><span></span>ESTAMOS LISTOS PARA ATENDERTE</div>
+                <h1>CONECTA CON <span>AF MOTORS</span></h1>
+                <p>¿Tienes dudas sobre una motocicleta, financiación o trámites? Elige tu canal favorito o envíanos un mensaje directo.</p>
+            </div>
+        </section>
+        <section class="contact-hub-section">
+            <div class="container">
+                <div class="contact-cards-grid">
+                    
+                    <article class="contact-card">
+                        <span class="card-tag">ATENCIÓN INMEDIATA</span>
+                        <h3>LÍNEA WHATSAPP</h3>
+                        <p class="contact-value">+57 304 390 9319</p>
+                        <div class="card-buttons">
+                            <a href="https://wa.me/573043909319?text=Hola%20AF%20MOTORS,%20vengo%20de%20su%20página%20web%20y%20quisiera%20recibir%20información%20sobre%20sus%20motocicletas." target="_blank" rel="noopener noreferrer" class="btn btn-primary">CHATEAR ↗</a>
+
+                            <button type="button" class="btn btn-outline btn-copy" data-copy="3043909319">COPIAR NÚMERO</button>
+                        </div>
+                    </article>
+
+                    <article class="contact-card">
+                        <span class="card-tag">COMUNIDAD Y CATÁLOGO</span>
+                        <h3>INSTAGRAM OFICIAL</h3>
+                        <p class="contact-value">@compraventaaf_motors</p>
+                        <div class="card-buttons">
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">VER PERFIL ↗</a>
+                            <button type="button" class="btn btn-outline btn-copy" data-copy="@compraventaaf_motors">COPIAR USUARIO</button>
+                        </div>
+                    </article>
+
+                    <article class="contact-card">
+                        <span class="card-tag">COBERTURA</span>
+                        <h3>BELLO Y MEDELLÍN</h3>
+                        <p class="contact-value">Atención con cita previa y vitrina</p>
+                        <div class="card-buttons">
+                            <a href="#ubicacion-mapa" class="btn btn-outline">VER ZONA DE COBERTURA ↓</a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="contact-main-grid" id="ubicacion-mapa">
+                    
+                    <div class="contact-form-box">
+                        <h2>ENVÍANOS UN <span>MENSAJE DIRECTO</span></h2>
+                        <p>Selecciona el motivo de tu consulta y redactaremos el mensaje perfecto para nuestro equipo.</p>
+
+                        <div class="topic-selector" id="topic-selector">
+                            <button type="button" class="topic-pill active" data-topic="Comprar una moto">Comprar moto</button>
+                            <button type="button" class="topic-pill" data-topic="Vender mi moto">Vender moto</button>
+                            <button type="button" class="topic-pill" data-topic="Trámites y traspasos">Trámites</button>
+                            <button type="button" class="topic-pill" data-topic="Agendar cita">Agendar cita</button>
+                        </div>
+
+                        <form id="interactive-contact-form" class="wizard-form">
+                            <div class="form-group">
+                                <label for="contact-name">Tu nombre *</label>
+                                <input type="text" id="contact-name" placeholder="Escribe tu nombre" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-topic-input">Asunto seleccionado</label>
+                                <input type="text" id="contact-topic-input" value="Comprar una moto" readonly>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-message">Tu mensaje *</label>
+                                <textarea id="contact-message" rows="4" placeholder="Cuéntanos qué motocicleta buscas o cómo podemos ayudarte..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                ENVIAR MENSAJE A WHATSAPP ↗
+                            </button>
+                        </form>
+                    </div>
+                    <div class="contact-map-box">
+                        <div class="map-header">
+                            <h3>NUESTRA <span>UBICACIÓN</span></h3>
+                            <p>Operamos en Bello y toda el Área Metropolitana de Medellín, Antioquia.</p>
+                        </div>
+                        <div class="map-frame">
+                            <iframe 
+                                title="Ubicación AF MOTORS Bello y Medellín"
+                                width="100%" 
+                                height="360" 
+                                style="border:0; filter: invert(90%) hue-rotate(180deg) contrast(95%);"
+                                loading="lazy"
+                                allowfullscreen
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126895.30423242015!2d-75.70060475568005!3d6.3320298463998945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442fa6958e1777%3A0x837c07a666cf50f0!2sBello%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1794495121333!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+                                
+                            </iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="copy-toast" class="copy-toast">¡Copiado al portapapeles!</div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const WHATSAPP_NUMBER = "573043909319";
+
+        const menuToggle = document.getElementById("menu-toggle");
+        const navbar = document.getElementById("navbar");
+        if (menuToggle && navbar) {
+            menuToggle.addEventListener("click", () => {
+                const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+                menuToggle.setAttribute("aria-expanded", !expanded);
+                navbar.classList.toggle("active");
+            });
+        }
+
+        const topicPills = document.querySelectorAll(".topic-pill");
+        const topicInput = document.getElementById("contact-topic-input");
+        if (topicPills.length && topicInput) {
+            topicPills.forEach(pill => {
+                pill.addEventListener("click", () => {
+                    topicPills.forEach(p => p.classList.remove("active"));
+                    pill.classList.add("active");
+                    topicInput.value = pill.dataset.topic;
+                });
+            });
+        }
+
+        const contactForm = document.getElementById("interactive-contact-form");
+        if (contactForm) {
+            contactForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+                const nombre = document.getElementById("contact-name").value.trim();
+                const asunto = document.getElementById("contact-topic-input").value;
+                const mensaje = document.getElementById("contact-message").value.trim();
+
+                const textoFinal = `Hola AF MOTORS, soy *${nombre}*.\n*Motivo:* ${asunto}\n*Mensaje:* ${mensaje}`;
+                window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(textoFinal), "_blank");
+            });
+        }
+
+        const toast = document.getElementById("copy-toast");
+        document.querySelectorAll(".btn-copy").forEach(btn => {
+            btn.addEventListener("click", () => {
+                navigator.clipboard.writeText(btn.dataset.copy);
+                if (toast) {
+                    toast.classList.add("show");
+                    setTimeout(() => toast.classList.remove("show"), 2500);
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

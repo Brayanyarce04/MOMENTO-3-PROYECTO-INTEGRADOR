@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vende tu Moto | AF MOTORS - Tasación Rápida y Segura</title>
+    <meta name="description" content="Vende tu motocicleta en Bello y Medellín con AF MOTORS. Completa nuestra encuesta interactiva y recibe una oferta rápida y segura.">
+    <meta name="theme-color" content="#03080C">
+    <link rel="icon" type="image/png" href="img/Logo.png">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="img/Logo.png" alt="AF MOTORS">
+            </a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navbar">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="inventario.html">INVENTARIO</a></li>
+                    <li><a href="servicios.html">SERVICIOS</a></li>
+                    <li><a href="vende-tu-moto.html" class="active">VENDE TU MOTO</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-header">SÍGUENOS</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="container">
+                <div class="section-tag"><span></span>NEGOCIACIÓN ÁGIL Y SEGURA</div>
+                <h1>CONVIERTE TU MOTO EN <span>DINERO RÁPIDO</span></h1>
+                <p>Responde esta breve encuesta de 3 pasos. Evaluaremos tu motocicleta y te contactaremos con una propuesta seria y transparente.</p>
+            </div>
+        </section>
+
+        <section class="sell-wizard-section">
+            <div class="container">
+                <div class="wizard-wrapper">
+                    
+                    <div class="wizard-progress">
+                        <div class="progress-step active" data-step="1">
+                            <span class="step-num">01</span>
+                            <span class="step-label">TU MOTO</span>
+                        </div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step" data-step="2">
+                            <span class="step-num">02</span>
+                            <span class="step-label">ESTADO</span>
+                        </div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step" data-step="3">
+                            <span class="step-num">03</span>
+                            <span class="step-label">CONTACTO</span>
+                        </div>
+                    </div>
+
+                    <form id="sell-moto-form" class="wizard-form" novalidate>
+                        
+                        <!-- PASO 1 -->
+                        <div class="wizard-step active" data-step="1">
+                            <h2>CUÉNTANOS SOBRE <span>TU MOTOCICLETA</span></h2>
+                            <p class="step-desc">Ingresa los datos básicos del vehículo que deseas vender.</p>
+                            
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="moto-marca">Marca *</label>
+                                    <select id="moto-marca" required>
+                                        <option value="">Selecciona la marca</option>
+                                        <option value="Yamaha">Yamaha</option>
+                                        <option value="Honda">Honda</option>
+                                        <option value="Suzuki">Suzuki</option>
+                                        <option value="Kawasaki">Kawasaki</option>
+                                        <option value="Bajaj">Bajaj</option>
+                                        <option value="KTM">KTM</option>
+                                        <option value="Ducati">Ducati</option>
+                                        <option value="BMW">BMW</option>
+                                        <option value="Otra">Otra marca</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="moto-referencia">Referencia / Línea *</label>
+                                    <input type="text" id="moto-referencia" placeholder="Ej. NMAX 155, XTZ 250, DR 650..." required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="moto-modelo">Año / Modelo *</label>
+                                    <input type="number" id="moto-modelo" min="1990" max="2027" placeholder="Ej. 2024" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="moto-km">Kilometraje actual *</label>
+                                    <input type="number" id="moto-km" min="0" placeholder="Ej. 12500" required>
+                                </div>
+                            </div>
+
+                            <div class="wizard-actions right">
+                                <button type="button" class="btn btn-primary btn-next">SIGUIENTE PASO →</button>
+                            </div>
+                        </div>
+                        <!-- PASO 2 -->
+                        <div class="wizard-step" data-step="2">
+                            <h2>ESTADO Y <span>EXPECTATIVA</span></h2>
+                            <p class="step-desc">Selecciona las condiciones actuales de tu moto para agilizar la valoración.</p>
+
+                            <div class="form-group">
+                                <label>¿Cómo calificas el estado general de la moto? *</label>
+                                <div class="radio-cards">
+                                    <label class="radio-card">
+                                        <input type="radio" name="estado-moto" value="Excelente (Como nueva)" checked>
+                                        <div class="card-content">
+                                            <strong>EXCELENTE</strong>
+                                            <span>Sin rayones, pintura original y al día.</span>
+                                        </div>
+                                    </label>
+                                    <label class="radio-card">
+                                        <input type="radio" name="estado-moto" value="Bueno (Uso normal)">
+                                        <div class="card-content">
+                                            <strong>BUENO</strong>
+                                            <span>Desgaste normal de uso, mecánica al 100%.</span>
+                                        </div>
+                                    </label>
+                                    <label class="radio-card">
+                                        <input type="radio" name="estado-moto" value="Regular (Requiere detalles)">
+                                        <div class="card-content">
+                                            <strong>CON DETALLES</strong>
+                                            <span>Necesita arreglos estéticos o mecánicos.</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="moto-papeles">Estado de SOAT y Tecnomecánica *</label>
+                                    <select id="moto-papeles" required>
+                                        <option value="Ambos vigentes">Ambos vigentes</option>
+                                        <option value="Solo SOAT vigente">Solo SOAT vigente</option>
+                                        <option value="Solo Tecno vigente">Solo Tecnomecánica vigente</option>
+                                        <option value="Vencidos / Por renovar">Vencidos / Por renovar</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="moto-precio">Precio que esperas recibir (COP) *</label>
+                                    <input type="number" id="moto-precio" placeholder="Ej. 15000000" required>
+                                </div>
+                            </div>
+
+                            <div class="wizard-actions">
+                                <button type="button" class="btn btn-outline btn-prev">← ANTERIOR</button>
+                                <button type="button" class="btn btn-primary btn-next">ÚLTIMO PASO →</button>
+                            </div>
+                        </div>
+                                                <!-- PASO 3 -->
+                        <div class="wizard-step" data-step="3">
+                            <h2>TUS DATOS DE <span>CONTACTO</span></h2>
+                            <p class="step-desc">¿A quién y dónde enviamos nuestra propuesta de compra?</p>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="cliente-nombre">Tu nombre completo *</label>
+                                    <input type="text" id="cliente-nombre" placeholder="Ej. Carlos Pérez" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="cliente-telefono">Tu número de WhatsApp *</label>
+                                    <input type="tel" id="cliente-telefono" placeholder="Ej. 300 123 4567" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="cliente-ciudad">Ciudad donde está la moto *</label>
+                                    <select id="cliente-ciudad">
+                                        <option value="Bello">Bello</option>
+                                        <option value="Medellín">Medellín</option>
+                                        <option value="Envigado / Itagüí / Sabaneta">Sur del Valle de Aburrá</option>
+                                        <option value="Otro municipio de Antioquia">Otro municipio</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="cliente-modalidad">¿Qué prefieres hacer?</label>
+                                    <select id="cliente-modalidad">
+                                        <option value="Venta directa (Pago inmediato)">Venta directa (Dinero rápido)</option>
+                                        <option value="Parte de pago por otra moto">Darla en parte de pago por una de AF MOTORS</option>
+                                        <option value="Consignación en vitrina">Dejarla en consignación</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="wizard-actions">
+                                <button type="button" class="btn btn-outline btn-prev">← ANTERIOR</button>
+                                <button type="submit" class="btn btn-primary">GENERAR SOLICITUD Y ENVIAR ↗</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- TICKET DE RESUMEN -->
+                    <div id="sell-ticket-result" class="ticket-box" hidden>
+                        <div class="ticket-header">
+                            <span class="ticket-badge">SOLICITUD REGISTRADA</span>
+                            <h3>RESUMEN DE TU <span>MOTOCICLETA</span></h3>
+                            <p>Tus datos han quedado guardados en este dispositivo. Haz clic abajo para enviar tu ficha directamente a un asesor de AF MOTORS.</p>
+                        </div>
+                        <div class="ticket-body" id="ticket-summary-content"></div>
+                        <div class="ticket-actions">
+                            <a href="#" id="btn-send-whatsapp-ticket" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                ENVIAR FICHA POR WHATSAPP AHORA ↗
+                            </a>
+                            <button type="button" id="btn-reset-wizard" class="btn btn-outline">
+                                COTIZAR OTRA MOTO
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const WHATSAPP_NUMBER = "573043909319";
+
+        const menuToggle = document.getElementById("menu-toggle");
+        const navbar = document.getElementById("navbar");
+        if (menuToggle && navbar) {
+            menuToggle.addEventListener("click", () => {
+                const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+                menuToggle.setAttribute("aria-expanded", !expanded);
+                navbar.classList.toggle("active");
+            });
+        }
+
+        const sellForm = document.getElementById("sell-moto-form");
+        if (sellForm) {
+            const steps = document.querySelectorAll(".wizard-step");
+            const progressSteps = document.querySelectorAll(".progress-step");
+            const ticketBox = document.getElementById("sell-ticket-result");
+            const ticketSummary = document.getElementById("ticket-summary-content");
+            const whatsappTicketBtn = document.getElementById("btn-send-whatsapp-ticket");
+            const resetWizardBtn = document.getElementById("btn-reset-wizard");
+            let currentStep = 0;
+
+            const showStep = (index) => {
+                steps.forEach((step, i) => step.classList.toggle("active", i === index));
+                progressSteps.forEach((pStep, i) => pStep.classList.toggle("active", i <= index));
+                currentStep = index;
+            };
+
+            const validateCurrentStep = () => {
+                const inputs = steps[currentStep].querySelectorAll("input[required], select[required]");
+                for (let input of inputs) {
+                    if (!input.value.trim()) {
+                        input.focus();
+                        input.style.borderColor = "#FF0000";
+                        return false;
+                    }
+                    input.style.borderColor = "rgba(255, 255, 255, 0.15)";
+                }
+                return true;
+            };
+
+            document.querySelectorAll(".btn-next").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    if (validateCurrentStep() && currentStep < steps.length - 1) {
+                        showStep(currentStep + 1);
+                    }
+                });
+            });
+
+            document.querySelectorAll(".btn-prev").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    if (currentStep > 0) showStep(currentStep - 1);
+                });
+            });
+
+            const renderTicket = (data) => {
+                const precioFormateado = new Intl.NumberFormat("es-CO", {
+                    style: "currency",
+                    currency: "COP",
+                    maximumFractionDigits: 0
+                }).format(data.precio);
+
+                ticketSummary.innerHTML = `
+                    <div class="ticket-item"><strong>Motocicleta</strong>${data.marca} ${data.referencia} (${data.modelo})</div>
+                    <div class="ticket-item"><strong>Kilometraje</strong>${Number(data.km).toLocaleString("es-CO")} km</div>
+                    <div class="ticket-item"><strong>Estado / Papeles</strong>${data.estado} · ${data.papeles}</div>
+                    <div class="ticket-item"><strong>Valor esperado</strong>${precioFormateado}</div>
+                    <div class="ticket-item"><strong>Propietario</strong>${data.nombre} (${data.ciudad})</div>
+                    <div class="ticket-item"><strong>Modalidad</strong>${data.modalidad}</div>
+                `;
+
+                const mensajeWA = `Hola AF MOTORS, quiero vender mi moto. Aquí están los datos de mi solicitud:\n` +
+                    `• *Moto:* ${data.marca} ${data.referencia} (${data.modelo})\n` +
+                    `• *Kilometraje:* ${Number(data.km).toLocaleString("es-CO")} km\n` +
+                    `• *Estado:* ${data.estado}\n` +
+                    `• *Documentos:* ${data.papeles}\n` +
+                    `• *Precio esperado:* ${precioFormateado}\n` +
+                    `• *Modalidad:* ${data.modalidad}\n` +
+                    `• *Contacto:* ${data.nombre} (${data.ciudad} - Tel: ${data.telefono})`;
+
+                whatsappTicketBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensajeWA)}`;
+                sellForm.hidden = true;
+                ticketBox.hidden = false;
+            };
+
+            const savedSolicitud = localStorage.getItem("afmotors_solicitud_venta");
+            if (savedSolicitud) {
+                renderTicket(JSON.parse(savedSolicitud));
+            }
+
+            sellForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+                if (!validateCurrentStep()) return;
+
+                const solicitudData = {
+                    marca: document.getElementById("moto-marca").value,
+                    referencia: document.getElementById("moto-referencia").value,
+                    modelo: document.getElementById("moto-modelo").value,
+                    km: document.getElementById("moto-km").value,
+                    estado: document.querySelector('input[name="estado-moto"]:checked').value,
+                    papeles: document.getElementById("moto-papeles").value,
+                    precio: document.getElementById("moto-precio").value,
+                    nombre: document.getElementById("cliente-nombre").value,
+                    telefono: document.getElementById("cliente-telefono").value,
+                    ciudad: document.getElementById("cliente-ciudad").value,
+                    modalidad: document.getElementById("cliente-modalidad").value
+                };
+
+                localStorage.setItem("afmotors_solicitud_venta", JSON.stringify(solicitudData));
+                renderTicket(solicitudData);
+            });
+
+            resetWizardBtn.addEventListener("click", () => {
+                localStorage.removeItem("afmotors_solicitud_venta");
+                sellForm.reset();
+                ticketBox.hidden = true;
+                sellForm.hidden = false;
+                showStep(0);
+            });
+        }
+    });
+    </script>
+</body>
+</html>
+
